@@ -1,10 +1,98 @@
 body {
   margin: 0;
   padding: 0;
+}
+.nav {
+   height: 3.2rem;
+   display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: relative;
+    z-index: 1001;
+  }
+  .nav__logo {
+    font-size: 1.5rem;
+    margin: auto 1rem;
+  } 
+
+  .nav__menu {
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  .nav__menu ul li {
+    list-style: none;
+  }
+
+  .nav__menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 1rem;
+    display: block; 
+  }
+
+  .nav__menu li:hover {
+    background-color: rgba(255,255,255, 0.5);
+  }
+
+  .nav__hamburger {
+      width: 1.875rem;
+      height: 1.313rem;
+      display: none; 
+      flex-direction: column;
+      justify-content: space-around;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+  }
+
+  .nav__hamburger-line {
+      width: 100%;
+      height: 0.188rem;
+      background-color: #fff;
+      border-radius: 0.625rem;
+      transition: all ease-in-out 0.2s;
+  }
+
+  @media screen and (max-width: 550px) {
+      .nav__hamburger {
+          display: flex;
+          position: absolute;
+          top: 3.2rem;
+          left: 0;
+          width: 100%;
+          background-color: rgba(0, 0, 0, 0.8);
+          flex-direction: column;
+      }
+      .nav__menu {
+          position: absolute;
+          top: 3.2rem;
+          left: 0;
+          width: 100%;
+          height: 0;
+          overflow: hidden;
+          flex-direction: column;
+          background-color: rgba(0, 0, 0, 0.8);
+          transition: height 0.3s ease-in-out;
+      }
+
+      .nav__menu ul li a {
+          padding: 1rem;
+          border-bottom: 1px solid #fff;
+      }
+
+      .nav__hamburger {
+          display: flex;
+      }
+  }
+
   h1 {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 4rem;
+    left: 220px;
     z-index: 1000;
     background: rgba(225, 181, 181, 0.9);
     padding: 15px 20px;
@@ -15,7 +103,7 @@ body {
     font-size: 24px;
     color: #333;
 }
-}
+
 #map {
   position: absolute;
   top: 0;
