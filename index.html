@@ -1,17 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Map prepared by Nicole Shkurovich on November 7, 2025 using data from Berkeley 
+     Architectural Heritage Association and GEOGC183-->
+
     <meta charset="UTF-8">
-    <title>Lab10</title>
+    <title>Berkeley Heritage Map</title>
     <link rel="stylesheet" href="./style.css">
     <link href="https://api.mapbox.com/mapbox-gl-js/v3.15.0/mapbox-gl.css" rel="stylesheet" />
-  </head>
-
-  <body>
-    <div id="map"></div>
-
     <script src="https://api.mapbox.com/mapbox-gl-js/v3.15.0/mapbox-gl.js"></script>
-    <script src="./script.js"></script>
-    <h1> Heritage Map of Berkeley</h1>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="nav__logo">Logo</div>
+      <a href="#" class="nav__hamburger">
+        <span class="nav__hamburger-line"></span>
+        <span class="nav__hamburger-line"></span>
+        <span class="nav__hamburger-line"></span>
+      </a>
+      <div class="nav__menu">
+        <ul>
+          <li class="nav__menu__link"><a href="#home"> Home</a></li>
+          <li class="nav__menu__link"><a href="#about"> About</a></li>
+          <li class="nav__menu__link"><a href="#contact"> Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <h1>Berkeley Heritage Map</h1>
+    <div id="map"></div>
+    <script src="script.js"></script>
   </body>
 </html>
+
